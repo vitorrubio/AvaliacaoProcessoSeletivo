@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AvaliacaoProcessoSeletivo.Api.Domain;
 using AvaliacaoProcessoSeletivo.Api.Infra.Data;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -12,6 +13,7 @@ namespace AvaliacaoProcessoSeletivo.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [EnableCors("CorsPolicy")]
     public class ContaController : ControllerBase
     {
 
