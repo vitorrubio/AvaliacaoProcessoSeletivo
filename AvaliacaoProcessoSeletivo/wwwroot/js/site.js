@@ -3,7 +3,7 @@
 
 // Write your JavaScript code.
 
-let _apiRoot = "https://localhost:44364/api/";
+let _apiRoot = "https://127.0.0.1:5001/api/";
 function sendAjax(url, metodo, options) {
     $.support.cors = true;
     options = options || {};

@@ -35,13 +35,14 @@ namespace AvaliacaoProcessoSeletivo.Api
                 options.AddPolicy("CorsPolicy",
                     builder => builder.AllowAnyOrigin()
                     .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials());
+                    .AllowAnyHeader());
             });
 
 
+
+
             //string path = Directory.GetCurrentDirectory();
-            services.AddControllers();
+            services.AddControllers().AddJsonOptions(opt => opt.JsonSerializerOptions.PropertyNamingPolicy = null);
             services.AddDbContext<Contexto>(options =>
                 //options.UseSqlServer(Configuration.GetConnectionString("AvaliacaoProcessoSeletivo")//.Replace("[DataDirectory]", path))
                 options.UseSqlite("Data Source=Avaliacao.db")
@@ -52,6 +53,8 @@ namespace AvaliacaoProcessoSeletivo.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("CorsPolicy");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

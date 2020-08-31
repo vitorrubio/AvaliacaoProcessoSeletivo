@@ -13,7 +13,6 @@ namespace AvaliacaoProcessoSeletivo.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [EnableCors("CorsPolicy")]
     public class ContaController : ControllerBase
     {
 
