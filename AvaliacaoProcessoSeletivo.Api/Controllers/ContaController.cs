@@ -50,6 +50,7 @@ namespace AvaliacaoProcessoSeletivo.Api.Controllers
         {
             var ct = _contexto.Conta.Find(id);
             _contexto.Remove(ct);
+            _contexto.SaveChanges();
             return Ok();
         }
 
