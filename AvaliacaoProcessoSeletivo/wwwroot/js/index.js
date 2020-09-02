@@ -6,18 +6,19 @@
             Descricao: $("#Descricao").val()
         };
 
-        let svc = new Services(_apiRoot + "conta", {
-            success: function (retorno) {
-                $("#Id").val(retorno.Id)
+        let svc = new Services(_apiRoot + "conta");
+
+
+        svc.post(JSON.stringify(conta))
+            .done(function (result) {
+                console.log("done");
+                $("#Id").val(result.Id)
                 alert("Sucesso");
-            },
-            error: function (xhr, status, erro) {
+            })
+            .fail(function (xhr, status, erro) {
                 console.log(erro);
                 alert("Nem");
-            }
-        });
-
-        svc.post(JSON.stringify( conta));
+            });
 
     });
 });

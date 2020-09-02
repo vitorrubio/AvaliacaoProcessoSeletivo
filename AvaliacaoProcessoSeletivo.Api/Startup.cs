@@ -53,7 +53,7 @@ namespace AvaliacaoProcessoSeletivo.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseCors("CorsPolicy");
+
 
             if (env.IsDevelopment())
             {
@@ -63,6 +63,16 @@ namespace AvaliacaoProcessoSeletivo.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            //pra funcionar o  cors via atributo o 
+            //comando UseCors tem que ser dado depois 
+            //de use routing e antes de use authorization, 
+            //e deve ir sem o argumento da policy, 
+            //porque a policy vc vai colocar no 
+            //atributo em cima do controller ou da action
+
+            //app.UseCors("CorsPolicy");
+            app.UseCors();
 
             app.UseAuthorization();
 

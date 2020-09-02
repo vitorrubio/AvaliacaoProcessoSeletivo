@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace AvaliacaoProcessoSeletivo.Api.Controllers
 {
+    [EnableCors("CorsPolicy")]
     [ApiController]
     [Route("api/[controller]")]
     public class ContaController : ControllerBase
