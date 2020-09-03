@@ -25,6 +25,8 @@ Mais uma avaliação comum de processos seleteivos. A avaliação pede, entre outras
 ### EF Core e Migrations
 - [Testing EF Core in Memory using SQLite](https://www.meziantou.net/testing-ef-core-in-memory-using-sqlite.htm)
 - [Entity Framework Core – database initialization with Unit Test](https://www.codejourney.net/2017/07/entity-framework-core-database-initialization-with-unit-test/)
+- [Access denied CREATE DATABASE LocalDB](https://stackoverflow.com/questions/56281343/access-denied-create-database-localdb)
+
 
 ### ChangeLog
 #### 2020-02-09
