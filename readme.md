@@ -25,3 +25,22 @@ Mais uma avaliação comum de processos seleteivos. A avaliação pede, entre outras
 ### EF Core e Migrations
 - [Testing EF Core in Memory using SQLite](https://www.meziantou.net/testing-ef-core-in-memory-using-sqlite.htm)
 - [Entity Framework Core – database initialization with Unit Test](https://www.codejourney.net/2017/07/entity-framework-core-database-initialization-with-unit-test/)
+
+### ChangeLog
+#### 2020-02-09
+testes unitarios com as combinações
+
+InMemoryDatabase
+
+Sqlite em arquivo
+
+sqlite in memory
+
+Sql server 
+
+migrations
+
+atualização e simplificação do wrapper de ajax
+
+habilitando cors via atributo
+
