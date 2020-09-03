@@ -8,4 +8,20 @@ Mais uma avaliação comum de processos seleteivos. A avaliação pede, entre outras
 
 
 ## Referências
+## CORS
 - [Enable Cross-Origin Requests (CORS) in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-3.1)
+- [O que é e como resolver os principais erros de CORS](https://www.treinaweb.com.br/blog/o-que-e-cors-e-como-resolver-os-principais-erros/)
+
+### CORS Anywhere
+É uma gambiarra, uma API que suporta CORS mas que atua como proxy para redirecionar para outra API que não suporta, assim você pode fazer uma requisição para qualquer API sem que tenha o CORS habilitado
+- [Questão no Stack Overflow](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe)
+- [Exemplo de Uso](https://ourcodeworld.com/articles/read/73/how-to-bypass-access-control-allow-origin-error-with-xmlhttprequest-jquery-ajax-)
+- [https://cors-anywhere.herokuapp.com/](https://cors-anywhere.herokuapp.com/)
+
+### Testes Unitários
+- [Microsoft.VisualStudio.TestTools.UnitTesting Namespace](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting?view=mstest-net-1.3.2)
+- [Use the MSTest framework in unit tests](https://docs.microsoft.com/en-us/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests?view=vs-2019)
+
+### EF Core e Migrations
+- [Testing EF Core in Memory using SQLite](https://www.meziantou.net/testing-ef-core-in-memory-using-sqlite.htm)
+- [Entity Framework Core – database initialization with Unit Test](https://www.codejourney.net/2017/07/entity-framework-core-database-initialization-with-unit-test/)
