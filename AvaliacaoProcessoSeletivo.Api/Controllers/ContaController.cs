@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -59,7 +59,11 @@ namespace AvaliacaoProcessoSeletivo.Api.Controllers
         [HttpPost]
         public Conta Post(Conta con)
         {
-
+            //if(con.DataCriacao.Kind == DateTimeKind.Utc)
+            //{
+            //    con.DataCriacao = con.DataCriacao.ToLocalTime();
+            //}
+            
             if(con.Id == 0)
             {
                 _contexto.Add(con);

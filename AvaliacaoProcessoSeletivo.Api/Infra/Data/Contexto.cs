@@ -1,15 +1,13 @@
-﻿using AvaliacaoProcessoSeletivo.Api.Domain;
+using AvaliacaoProcessoSeletivo.Api.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace AvaliacaoProcessoSeletivo.Api.Infra.Data
 {
 
-	public class Contexto : DbContext
+    public class Contexto : DbContext
 	{
 		public Contexto(DbContextOptions<Contexto> op) : base(op)
 		{

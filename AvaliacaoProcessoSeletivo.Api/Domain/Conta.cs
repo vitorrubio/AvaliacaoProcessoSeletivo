@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -22,5 +22,7 @@ namespace AvaliacaoProcessoSeletivo.Api.Domain
         //[Column("Descricao")]
         [MaxLength(500, ErrorMessage = "A descrição tem que ter no máximo 500 caracteres")]
         public string Descricao { get; set; }
+
+        public DateTime DataCriacao { get; set; }
     }
 }

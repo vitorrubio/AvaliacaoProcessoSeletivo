@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace AvaliacaoProcessoSeletivo.Api
 {
@@ -42,13 +43,22 @@ namespace AvaliacaoProcessoSeletivo.Api
 
 
             string path = Directory.GetCurrentDirectory();
-            services.AddControllers().AddJsonOptions(opt => opt.JsonSerializerOptions.PropertyNamingPolicy = null);
+            services.AddControllers().AddJsonOptions(opt =>
+            {
+                opt.JsonSerializerOptions.PropertyNamingPolicy = null;
+            });
+
+            //services.AddControllers().AddNewtonsoftJson(opt => {
+            //    opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            //    opt.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Local;
+            //});
+
             services.AddDbContext<Contexto>(options =>
                 //varios tipos de conexão, descomentar e experimentar cada um
 
                 //options.UseSqlServer(Configuration.GetConnectionString("AvaliacaoProcessoSeletivo") ////para usar sql server e pegar connection string do appSettings
                     //.Replace("[DataDirectory]", path)) //para trocar uma tag de configuração pelo path
-                options.UseSqlite(Configuration.GetConnectionString("AvaliacaoProcessoSeletivo")) ////para usar sqlitee pegar connection string do appSettings
+                options.UseSqlite(Configuration.GetConnectionString("AvaliacaoProcessoSeletivo")) ////para usar sqlite e pegar connection string do appSettings
 
 
                 );
