@@ -29,6 +29,10 @@ Mais uma avaliação comum de processos seleteivos. A avaliação pede, entre outras
 
 
 ### ChangeLog
+
+#### 2020-10-19
+adição do campo DataCriacao na conta e migration e exemplos comentados de possíveis formas de converter o Date do js para um DateTime local com mesmo horário no C#. Exemplo comentado de uso do serializador Newtonsoft Json em vez do nativo.
+
 #### 2020-02-09
 testes unitarios com as combinações
 
